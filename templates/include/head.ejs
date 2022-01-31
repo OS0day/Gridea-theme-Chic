@@ -14,29 +14,32 @@
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 <% if (site.customConfig.cdnSetting == "") { %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+    <!-- <link rel="stylesheet" href="<%= site.customConfig.cdnSetting %>/assets/media/css/style.min.css" /> -->
+    <link rel="stylesheet" href="<%= site.customConfig.cdnSetting %>/assets/media/css/style.min.css" />
+    <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/tocbot.min.js"></script>
+    <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/script.min.js"></script>
+    <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/icon.min.js"></script>
     <%}else{%>
         <link rel="stylesheet" href="<%= site.customConfig.cdnSetting %>/assets/media/css/style.min.css" />
         <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/tocbot.min.js"></script>
         <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/script.min.js"></script>
         <script src="<%= site.customConfig.cdnSetting %>/assets/media/script/icon.min.js"></script>
         <% } %>
-            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <!-- <script src="https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/js/Card/prism.min.js"></script> -->
+            <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script>
+            
             <link rel="stylesheet" href="<%= site.customConfig.prismSetting %>" />
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
             <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
             <% if (site.customConfig.love_click_animation == "on") { %>
                 <!--点击特效-->
-                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/js/love.min.js"></script>
                 <% }if (site.customConfig.music == "on") { %>
-                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/APlayer.min.js"></script>
+                    <script src="<%= site.customConfig.cdnSetting %>@latest/assets/media/script/APlayer.min.js"></script>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
                     <% } if (site.customConfig.view == "on") { %>
                         <!--CDN样式-->
-                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
                         <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
                         <% } if (site.customConfig.baidu) { %>
                             <script>

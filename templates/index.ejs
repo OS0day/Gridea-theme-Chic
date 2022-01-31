@@ -9,11 +9,16 @@
 <body>
     <div class="wrapper">
         <%- include('./include/header') %>
-            <div class="main">
-                <div class="container">
-                    <div class="intro">
+            <div class="main" style="background-image: url('<%= site.customConfig.cdnSetting %>/images/back.jpeg');
+            /* <div class="main" style="background-image: url('<%= themeConfig.domain %>/images/back.jpg'); */
+                    display: inline-block;
+                    height: auto;
+                    max-width: 100%;
+                ">
+                <div class="container" >
+                    <div class="intro"  >
                         <div class="avatar">
-                            <a href="<%= themeConfig.domain %>"><img src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>"></a>
+                            <a href="<%= themeConfig.domain %>"><img src="<%= site.customConfig.cdnSetting %>/images/avatar.jpeg?v=<%= site.utils.now %>"></a>
                         </div>
                         <div class="nickname">
                             <%= site.customConfig.author%>
@@ -24,7 +29,7 @@
                             </span>
                         </div>
                         <div class="links">
-                            <% ['rss','twitter', 'facebook', 'github', 'linkedin', 'youtube','instagram','weibo','qq','send'].forEach((item) => { %>
+                            <% ['rss','twitter', 'facebook','gitee', 'github', 'linkedin', 'youtube','instagram','weibo','qq','send'].forEach((item) => { %>
                                 <% if (site.customConfig[item]) { %>
                                     <a class="link-item" href="<%= site.customConfig[item] %>" title="<%- item %>"><i class="fa fa-<%= item %>"></i></a>
                                     <% } %>
@@ -34,14 +39,53 @@
                 </div>
             </div>
     </div>
+    <div style="margin: 2% auto; ">
+        <h2 style="text-align: center;">近期文章</h2>
+    </div>
+    <section>
+            <div class="wrapper">
+                <div class="main" >
+                    <div class="post-wrap archive" >
+                        <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+                            <% years.forEach(function(year) { %>
+                                <% posts.forEach(function(post) { %>
+                                        <article class="archive-item" style="border-bottom:1px solid #CCC">
+                                            <a class="archive-item-link"  href="<%- post.link%>">
+                                                <%= post.title %>
+                                            </a><span class="archive-item-date"><%= post.dateFormat %> </span></article>
+                                            <% }) %>
+                                                <% }) %>
+                    </div>
+                    <div class="pagination-container">
+                        <% if(site.customConfig.language=="zh"){%>
+                            <% if (pagination.prev) { %>
+                                <a href="<%= pagination.prev %>" class="prev"><i class="icon-arrow-ios-back-outline"></i> &#x4E0A;&#x4E00;&#x9875;</a>
+                                <% } %>
+                                    <% if (pagination.next) { %>
+                                        <a href="<%= pagination.next %>" class="next">&#x4E0B;&#x4E00;&#x9875; <i class="icon-arrow-ios-forward-outline"></i></a>
+                                        <% } %>
+                                            <% }else{ %>
+                                                <% if (pagination.prev) { %>
+                                                    <a href="<%= pagination.prev %>" class="prev"><i class="icon-arrow-ios-back-outline"></i> Prev</a>
+                                                    <% } %>
+                                                        <% if (pagination.next) { %>
+                                                            <a href="<%= pagination.next %>" class="next">Next <i class="icon-arrow-ios-forward-outline"></i></a>
+                                                            <% } %>
+                                                                <% } %>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+</div>
 
 </body>
 <script>
     // type 
     var typed = new Typed("#subtitle", {
         strings: ['<%= site.customConfig.description%>', '', ''],
-        startDelay: 10,
-        typeSpeed: 200,
+        startDelay: 100,
+        typeSpeed: 300,
         loop: true,
         backSpeed: 100,
         showCursor: true

@@ -17,7 +17,7 @@
                             </h3>
                             <% posts.forEach(function(post) { %>
                                 <%if (post.date.indexOf(year) !== -1) { %>
-                                    <article class="archive-item">
+                                    <article class="archive-item" style="border-bottom:1px solid #CCC">
                                         <a class="archive-item-link" href="<%- post.link%>">
                                             <%= post.title %>
                                         </a><span class="archive-item-date"><%= post.dateFormat %> </span></article>

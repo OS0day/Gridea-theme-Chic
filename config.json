@@ -1,8 +1,8 @@
 {
-    "name": "Chic-给我的主题来个Star呗!🎉",
+    "name": "Chic🎉",
     "version": "1.7.6",
-    "author": "@ITJoker (原作者：@Bentham)",
-    "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
+    "author": "@OS0day (原作者：@Bentham)",
+    "repository": "https://github.com/OS0day/Gridea-theme-Chic",
     "customConfig": [{
             "name": "author",
             "label": "博主名字",
@@ -106,6 +106,14 @@
             "value": "",
             "type": "input",
             "note": "链接地址"
+        },
+        {
+        "name": "gitee",
+        "label": "gitee",
+        "group": "社交",
+        "value": "",
+        "type": "input",
+        "note": "链接地址"
         },
         {
             "name": "linkedin",
@@ -302,17 +310,17 @@
             "name": "prismSetting",
             "label": "代码高亮设置(prism.css)",
             "group": "主题设置",
-            "value": "https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css",
+            "value": "https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/css/Card/prism.min.css",
             "type": "input",
-            "note": "默认 https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.cssic"
+            "note": "默认 https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/css/Card/prism.min.cssic"
         },
         {
             "name": "cdnSetting",
             "label": "CDN设置",
             "group": "主题设置",
-            "value": "https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic",
+            "value": "https://cdn.jsdelivr.net/gh/OS0day/Gridea-theme-Chic",
             "type": "input",
-            "note": "不设置为默认的jsdeliver,例如：https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic"
+            "note": "不设置为默认的jsdeliver,例如：https://cdn.jsdelivr.net/gh/OS0day/Gridea-theme-Chic"
         },
         {
             "name": "bs",

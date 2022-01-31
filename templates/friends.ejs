@@ -27,14 +27,16 @@
                             <% if (site.customConfig.friends) { %>
                                 <% site.customConfig.friends.forEach(function(friend) { %>
                                     <div class="friend-box">
+                                        <a href="<%= friend.siteLink %>">
                                         <img class="friend-avatar" src="<%= friend.siteLogo %>">
                                         <div class="flink-info">
                                             <a href="<%= friend.siteLink %>" target="_blank">
                                                 <%= friend.siteName %>
+                                                <br />
+                                               <p style="color: black;"> <%= friend.description %></p>
                                             </a>
-                                            <br />
-                                            <%= friend.description %>
                                         </div>
+                                        </a>
                                     </div>
                                     <% }); %>
                                         <% } %>
@@ -42,6 +44,7 @@
                     </article>
                 </div>
             </div>
+            <div style="text-align: center;"><h2><strong>以上排名不分先后</strong></h2></div>
             <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
                 <% if (commentSetting.commentPlatform === 'gitalk') { %>
                     <%- include('./include/gitalk') %>

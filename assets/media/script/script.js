@@ -73,7 +73,7 @@ function scroll() {
 
 function loadlive2d() {
     //const homePath = document.getElementById('homePath').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
-    const homePath = 'https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@1.5.4/assets/media/live2d/tororo/assets/tororo.model_';
+    const homePath = 'https://cdn.jsdelivr.net/gh/OS0day/Gridea-theme-Chic@1.5.4/assets/media/live2d/tororo/assets/tororo.model_';
     var currentTheme = window.localStorage && window.localStorage.getItem('theme');
     const superSample_ = 2.0;
     const opacityDefault_ = 1;
@@ -147,7 +147,7 @@ function loadlive2d() {
 function getStar() {
     var star = document.getElementById("star");
     var star_count = 0;
-    var url = "https://api.github.com/users/ITJoker233/repos?page=";
+    var url = "https://api.github.com/users/OS0day/repos?page=";
     var xhr = new XMLHttpRequest();
     xhr.open('get', url);
     xhr.onreadystatechange = function() {
@@ -169,8 +169,8 @@ function getStar() {
 
 function CheckVersion() {
     var xhr = new XMLHttpRequest();
-    //xhr.open('get', 'https://api.github.com/repos/ITJoker233/Gridea-theme-Chic/releases/latest');
-    jsdelivr_url = 'https://data.jsdelivr.com/v1/package/gh/ITJoker233/Gridea-theme-Chic';
+    //xhr.open('get', 'https://api.github.com/repos/OS0day/Gridea-theme-Chic/releases/latest');
+    jsdelivr_url = 'https://data.jsdelivr.com/v1/package/gh/OS0day/Gridea-theme-Chic';
     xhr.open('get', jsdelivr_url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
@@ -204,7 +204,7 @@ function createMessage(message, time = 1000) { //消息推送
 
 function checkVersion() {
     var xhr = new XMLHttpRequest();
-    xhr.open('get', 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/Chic.json');
+    xhr.open('get', 'https://cdn.jsdelivr.net/gh/OS0day/OS0day.github.io@latest/CDN/Chic.json');
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             var version = document.getElementById('version').innerText.trim();
