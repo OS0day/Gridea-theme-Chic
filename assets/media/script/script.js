@@ -73,7 +73,7 @@ function scroll() {
 
 function loadlive2d() {
     //const homePath = document.getElementById('homePath').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
-    const homePath = 'https://cdn.jsdelivr.net/gh/OS0day/Gridea-theme-Chic@1.5.4/assets/media/live2d/tororo/assets/tororo.model_';
+    const homePath = 'https://cdn.jsdelivr.net/gh/OS0day/Gridea-theme-Chic@latest/assets/media/live2d/tororo/assets/tororo.model_';
     var currentTheme = window.localStorage && window.localStorage.getItem('theme');
     const superSample_ = 2.0;
     const opacityDefault_ = 1;
@@ -204,7 +204,7 @@ function createMessage(message, time = 1000) { //消息推送
 
 function checkVersion() {
     var xhr = new XMLHttpRequest();
-    xhr.open('get', 'https://cdn.jsdelivr.net/gh/OS0day/OS0day.github.io@latest/CDN/Chic.json');
+    xhr.open('get', 'https://cdn.jsdelivr.net/gh/OS0day/MyBlogThemeChicCDN@latest/CDN/Chic.json');
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             var version = document.getElementById('version').innerText.trim();
